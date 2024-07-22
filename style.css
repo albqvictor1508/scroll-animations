@@ -1,8 +1,14 @@
+:root {
+  --cor-preta: #121212;
+  --cor-branca-1: #FFF;
+  --cor-branca-2: #fafafa;
+}
+
 
 body {
   font-family: sans-serif;
-  color: #121212;
-  background: #fafafa;
+  color: var(--cor-preta);
+  background: var(--cor-branca-2);
   transition: 0.3s ease-out;
   overflow-x: hidden;
   max-width: 100%;
@@ -15,7 +21,7 @@ body {
 
 .main{
   height: 100vh;
-  background: #121212;
+  background: var(--cor-preta);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,12 +30,12 @@ body {
 }
 
 .title{
-  color: #FFF;
+  color: var(--cor-branca-1);
   font-size: 34px;
 }
 
 .text{
-  color: #FFF;
+  color: var(--cor-branca-1);
 }
 
 .area{
@@ -39,4 +45,33 @@ body {
   align-items: flex-start;
   height: 50vh;
   margin: 0 44px; 
+}
+
+section:not(#sectionPin) {
+  min-height: 100vh;
+  width: 100%;
+  
+}
+
+#sectionPin {
+  overflow: hidden;
+  background: var(--cor-preta);
+  color: var(--cor-branca-1);
+  left: 0;
+  display: flex;
+}
+
+.pin-wrap {
+  display: flex;
+  height: 100vh ;
+  
+  h2 {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  img {
+    height: 50vh;
+    width: auto;
+    object-fit: cover;
+  }
 }
